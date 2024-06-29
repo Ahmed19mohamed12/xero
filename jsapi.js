@@ -1501,16 +1501,17 @@ function phpCommands(fileId,addetional1 = "",addetional2="",addetional3 = "") {
                                     localStorage.removeItem("items");
                                     localStorage.setItem("items",JSON.stringify(cartMap));
                                     // console.log(JSON.stringify(cartMap))
+                                    var pricebtnvalue = parseInt(inspector("checkout-button").innerText.replace("Checkout (Pay ","").replace(")",""));
                                     $.ajax({
                                         url:host+"store_items.php",
                                         dataType:"json",
                                         method:"post",
                                         data:{
-                                            items:JSON.stringify(cartMap)
+                                            items:JSON.stringify(cartMap),
+                                            amount_cents:pricebtnvalue+"00"
                                         }
                                     }).done(
                                         function (jqXHR44) {
-                                            
                                             let jsonData = JSON.parse(result);
                                             step2(jsonData['token']);
                                         }

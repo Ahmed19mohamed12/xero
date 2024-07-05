@@ -3,7 +3,7 @@
 var original = '<div class="main-card" id="creatine"><div class="card"><img src="products image/4.png" alt=""><div class="card__content" style="cursor: pointer;"><p class="card__title">Protein</p><p class="card__description">xfmffs</p></div></div><div class="product-title" style="cursor: pointer;"><h2>Protein</h2><h2>Max Muscle</h2></div><div class="product-price"><h3>1750L.E</h3></div><div class="btn-combo"><div class="cart"><a href="#" title="Add to Cart" class="btn-cart"><i class="fa-solid fa-cart-shopping"></i></a></div><div class="favourite"><a href="#" title="Add to Favourite" class="btn-fav"><i class="fa-regular fa-heart"></i></a></div></div></div>'
 var div010929 = '<div class="card__content" style="cursor: pointer;"><p class="card__title">Protein</p><p class="card__description">xfmffs</p></div></div><div class="product-title" style="cursor: pointer;"><h2>Protein</h2><h2>Max Muscle</h2></div><div class="product-price"><h3>1750L.E</h3></div><div class="btn-combo"><div class="cart"><a href="#" title="Add to Cart" class="btn-cart"><i class="fa-solid fa-cart-shopping"></i></a></div><div class="favourite"><a href="#" title="Add to Favourite" class="btn-fav"><i class="fa-regular fa-heart"></i></a></div></div></div>'
 
-var host = document.location.origin +"/php/store/php/";
+var host = document.location.origin +"/php/";
 function displaypopup(name,description) {
     // inspector("cookieHeading").innerText = name;
     // inspector("cookieDescription").innerText = description.replace("<br>","");

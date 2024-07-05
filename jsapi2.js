@@ -1619,4 +1619,24 @@ function phpCommands(fileId,addetional1 = "",addetional2="",addetional3 = "") {
         );
     }
     // end getting orders for ordinary user
+    else if (fileId == 29) {
+        var pricebtnvalue = parseInt(inspector("checkout-button").innerText.replace("Checkout (Pay ","").replace(")",""));
+        $.ajax({
+            url: host+"cash_on_delivery.php",
+            method:'post',
+            dataType:'json',
+            data: {
+                amount_cents: pricebtnvalue,
+            }
+        }).always(
+            function (jqXHR) {
+                if (jqXHR.status == 303) {
+                    alert("Order Placed Successfully");
+                }else{
+                    alert("Error, Please Check Your Internet Connection");
+                }
+                
+            }
+        )
+    }
 }

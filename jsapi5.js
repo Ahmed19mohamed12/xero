@@ -426,7 +426,7 @@ function phpCommands(fileId,addetional1 = "",addetional2="",addetional3 = "") {
                             const finalItem = jsonData[item];
                             // console.log(finalItem);
                             var images = getcartElementsIds(finalItem["images"]);
-                            var url = '"'+'http://localhost/php/store/xero/Xero/Bootstrap/item.php?id='+finalItem["itemid"]+'"' ;
+                            var url = '"'+'/item.php?id='+finalItem["itemid"]+'"' ;
                             var donemessage = '"'+finalItem["itemname"]+" Link Copied To Clipboard"+'"';
 
                             // console.log(images);
